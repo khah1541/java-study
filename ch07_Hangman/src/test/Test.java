@@ -1,6 +1,8 @@
-package application;
+package test;
 
 import java.util.Random;
+
+import application.RandomWord;
 
 public class Test {
 
@@ -12,7 +14,7 @@ public class Test {
 		//System.out.println(word.toString());
 	
 		Random random = new Random();
-		
+
 		String[] words = {"펭수","고양이","라이언","늑대","소"};
 		
 		
