@@ -21,9 +21,20 @@ public class Hangman {
 			checkUserInput(); // 맞는지 체크 다 맞으면 running = false
 		}while (running);
 	}
+		public void close() {
+			scanner.close();
+		}
+		
 		public void checkUserInput() 
 		{
-		 System.out.println("체크");	
+		//유저가 단어를 다 맞췄는지 체크해서 게임을 종료
+			//게임 종료 확인을 하는 메소드 isCompleted 를 RandomWord 클래스에 만들기
+			
+		 if(word.isCompleted()) {
+			 System.out.println("잘 맞췄어요");
+			 System.out.println("정답은 : " + word.toString());
+			 running = false; // 반복문 종료
+		 }
 		}
 		public void getUserInput() {
 		//유저에게 한 문자 입력 요구
