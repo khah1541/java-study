@@ -11,11 +11,11 @@ public class Gasoline {
 	}
 
 	
-	public static double calcEffiency(double fuel,double distance) {
+	public static double calcEffiency(double gasoline,double distance) {
 		
-		calcEffiency = distance%gasoline;
+	
 		
 		
-		return = 0;
+		return  distance/gasoline;
 	}
 }

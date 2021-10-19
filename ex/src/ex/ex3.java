@@ -3,7 +3,20 @@ package ex;
 public class ex3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		double ¿ù = 8.62;
+		double È­ = 10.23;
+		double ¼ö = 12.48;
+		double ¸ñ = 7.82;
+		double ±Ý = 9.54;
+		
+		double ÃÑÇÕ = ¿ù+È­+¼ö+¸ñ+±Ý;
+		
+		System.out.printf("ÃÑÇÕ : %.2f" , ÃÑÇÕ);
+		
+		
+		
+		
 
 	}
 
