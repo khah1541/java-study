@@ -13,8 +13,8 @@ public class MainPanel extends JPanel implements ColorChangeListener{
 	}
 
 	@Override
-	public void changColor(Color color) {
-		setBackground(color); // 배경색 바꾸기 추상메소드 changColor 완성
+	public void chagColor(Color color) {
+		setBackground(color);
 		
 	}
 

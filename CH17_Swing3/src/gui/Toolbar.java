@@ -18,7 +18,7 @@ class ColorListener implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		colorChanger.changColor(color);
+		colorChanger.chagColor(color);
 		
 		
 
@@ -33,12 +33,21 @@ public class Toolbar extends JToolBar{
 
 	private static final long serialVersionUID = 1L;
 	
-	public Toolbar(ColorChangeListener colorChanger {
+	public Toolbar(ColorChangeListener colorChanger) {
 		JButton redButton = new JButton("RED");
 		JButton blueButton = new JButton("BLUE");
 		
-		redButton.addActionListener(new ColorListener(colorChanger, Color.RED));
-		blueButton.addActionListener(new ColorListener(colorChanger, Color.BLUE));
+		redButton.addActionListener(new ActionListener() {//익명클래스
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				colorChanger.chagColor(Color.RED);
+				
+			}
+			
+		});
+											//람다식
+		blueButton.addActionListener(e->colorChanger.chagColor(Color.BLUE));
 		
 		add(redButton);
 		add(blueButton);
