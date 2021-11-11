@@ -2,7 +2,7 @@ package throwing_Exception2;
 
 public class App {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		// 예외처리를 넘김
 		Thermostat stat = new Thermostat();
 		

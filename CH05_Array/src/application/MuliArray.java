@@ -15,8 +15,7 @@ public class MuliArray {
 			String[] innerArray = texts[i];
 		
 			for(int j=0;j<innerArray.length;j++) {
-				System.out.pr
-				intf("%s\t",innerArray[j]);
+				System.out.printf("%s\t",innerArray[j]);
 			}
 		
 			System.out.println();
