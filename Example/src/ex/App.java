@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 
 public class App {
-	private static final char[] Daram = null;
 	static ArrayList<Account> mAccount = new ArrayList<>();
 	private static boolean mIsRunning = true;
+	
 
 	public static void main(String[] args) {
 		while (mIsRunning) {
@@ -98,6 +98,7 @@ public class App {
 				if (result.trim().isEmpty()) {
 					System.out.println("비밀번호가 입력되지않았습니다.");
 				} else {
+					
 					break;
 				}
 			}
@@ -112,7 +113,7 @@ public class App {
 
 		String id = input(1);
 		String password = input(3);
-
+		
 		boolean isExist = false;
 		for (Account each : mAccount) {
 			String eachId = each.getId();
@@ -122,19 +123,29 @@ public class App {
 				System.out.println("로그인 성공");
 				System.out.println("환영합니다 OO의세계에 오신걸 환영합니다.");
 				System.out.println("서버를 선택하세요.");
-				System.out.println("1.연");
-				System.out.println("2.낙랑");
-				System.out.println("2.주몽");
-
+				System.out.println("1.연 2.주몽 3.낙랑");
 				Scanner scanner = new Scanner(System.in);
+				int b = scanner.nextInt();
+				if(b == 1) {
+					System.out.println("연 서버");
+				}else if( b == 2) {
+					System.out.println("주몽 서버");
+				}else if (b == 3) {
+					System.out.println("낙랑 서버");
+				}
+				else {
+					
+					break;
+				}
 
-				int a = scanner.nextInt();
+				
 				System.out.println("접속완료");
 				System.out.println("캐릭터를 생성해주세요");
 				System.out.println("a.전사 b.마법사 c.도적 d.궁수");
-
+				
 				Scanner scanner1 = new Scanner(System.in);
 
+				
 				String kh = scanner1.nextLine();
 				switch (kh) {
 				case "a":
@@ -164,57 +175,69 @@ public class App {
 
 					break;
 
+					
+					
 				default:
 					System.out.println("잘못된 선택입니다.");
 					System.out.println("접속을 종료합니다.");
 					mIsRunning = false;
 					break;
 
-				}
-				Scanner scanner2 = new Scanner(System.in);
+				
+				if(kh != null) {
 				System.out.println("1.사냥터");
 				System.out.println("2.마을");
 				System.out.println("3.던전");
 				System.out.println("4.거래소");
-
-				int ft = scanner2.nextInt();
+				}
+				int ft = scanner.nextInt();
 				 
 				
 				switch (ft) {
 				case 1:
 					System.out.println("사냥터로 이동합니다.");
+					mIsRunning = false;
 					break;
 				case 2:
 					System.out.println("마을로 이동합니다.");
+					mIsRunning = false;
 					break;
 				case 3:
 					System.out.println("던전으로 이동합니다.");
+					mIsRunning = false;
 					break;
 				case 4:
 					System.out.println("거래소로 이동합니다.");
+					mIsRunning = false;
 					break;
 				default:
 					System.out.println("잘못된 선택입니다.");
+					mIsRunning = false;
 					break;
-					
-				}
-				if(ft == 1 ) {
-					Choice Monster = new Choice();
-					Monster.Daram();
-				}
 				
+				}
 				
 				isExist = true;
 				break;
+					
+					
+				}
+			
+				}
+				
+				
+				
 				
 				
 			}
-		}
-		if (!isExist) {
-			System.out.println("아이디 혹은 비밀번호가 틀립니다.");
-		}
 		
+		if (!isExist) {
+			System.out.println("잘못된 입력입니다.");
+		}
+		}
+		}
 	}
+		
+	
 
 
-}

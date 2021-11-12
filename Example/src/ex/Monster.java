@@ -1,6 +1,6 @@
 package ex;
 
-public class Monster extends App {
+public class Monster {
 	
 	String Name;//¿Ã∏ß
 	int level;
