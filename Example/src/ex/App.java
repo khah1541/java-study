@@ -184,12 +184,12 @@ public class App {
 					break;
 
 				
-				if(kh != null) {
+				if(kh) {
 				System.out.println("1.사냥터");
 				System.out.println("2.마을");
 				System.out.println("3.던전");
 				System.out.println("4.거래소");
-				}
+				
 				int ft = scanner.nextInt();
 				 
 				
